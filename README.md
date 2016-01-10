@@ -37,9 +37,9 @@ Now what has been added?
 ### So how do I get started?
 
 * Clone the project onto your local machine
+* Make `setup.sh` executable: `chmod +x setup.sh`
 * Run `setup.sh`
 * Create a Heroku instance
-* Add the Heroku instance to your Git remotes
 * Deploy!
 
 ### The Project Structure Explained

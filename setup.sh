@@ -1,4 +1,4 @@
-#!/usr/env/bin bash
+#!/bin/bash
 
 mkdir app/lib/
 mkdir app/models/
@@ -16,9 +16,8 @@ mkdir tests/models/
 bundle install
 
 rm -rf .git
+rm setup.sh
 
 git init
 git add .
 git commit -m "Initial commit"
-
-rm setup.sh
