@@ -13,7 +13,7 @@ mkdir tests/helpers/
 mkdir tests/lib/
 mkdir tests/models/
 
-bundle install
+bundle install --without production
 
 rm -rf .git
 rm setup.sh
