@@ -5,8 +5,9 @@ require 'sinatra/content_for'
 
 configure do
   if ENV['DATABASE_URL'].blank?
-# create a dev and production config.yml
-    config_file 'config/config.yml'
+    config_file 'config/development.yml'
+    db_config = YAML.load(File.read('config/database.yml'))
+    ActiveRecord::Base.establish_connection db_config['development']
   else
     ActiveRecord::Base.establish_connection ENV['DATABASE_URL']
   end
@@ -15,8 +16,6 @@ configure do
   Dir["./app/helpers/*.rb"].each { |file| require file }
   Dir["./app/routes/*.rb"].each { |file| require file }
   Dir["./app/lib/*.rb"].each { |file| require file }
-
-# find out what this does again
 
   $stdout.sync = true
 end
