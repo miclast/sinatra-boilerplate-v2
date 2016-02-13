@@ -6,6 +6,7 @@ gem "sinatra-activerecord", "2.0.9"
 gem "puma", "2.15.3"
 gem "sinatra-contrib", "1.4.6"
 gem "rake", "10.4.2"
+gem "sinatra-flash", "0.3.0"
 
 group :development do
   gem "compass", "1.0.3"

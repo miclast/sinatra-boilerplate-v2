@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/config_file'
 require 'sinatra/content_for'
+require 'sinatra/flash'
 
 configure do
   if ENV['DATABASE_URL'].blank?
@@ -16,6 +17,8 @@ configure do
   Dir["./app/helpers/*.rb"].each { |file| require file }
   Dir["./app/routes/*.rb"].each { |file| require file }
   Dir["./app/lib/*.rb"].each { |file| require file }
+
+  enable :sessions
 
   $stdout.sync = true
 end
