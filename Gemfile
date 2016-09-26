@@ -1,19 +1,20 @@
 source 'https://rubygems.org'
 
-gem "sinatra", "1.4.6"
-gem "activerecord", "4.2.5"
-gem "sinatra-activerecord", "2.0.9"
-gem "puma", "2.15.3"
-gem "sinatra-contrib", "1.4.6"
-gem "rake", "10.4.2"
+gem "sinatra", "1.4.7"
+gem "activerecord", "5.0.0.1"
+gem "sinatra-activerecord", "2.0.10"
+gem "puma", "3.6"
+gem "sinatra-contrib", "1.4.7"
+gem "rake", "11.3.0"
 gem "sinatra-flash", "0.3.0"
+
 
 group :development do
   gem "compass", "1.0.3"
-  gem "shotgun", "0.9.1"
+  gem "shotgun", "0.9.2"
   gem "tux", "0.3.0"
   gem "mocha", "1.1.0"
-  gem "foreman", "0.78.0"
+  gem "foreman", "0.82.0"
   gem "sqlite3", "1.3.11"
 end
 
